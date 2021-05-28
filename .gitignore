@@ -1,0 +1,8 @@
+*.iso
+initramfs
+vmlinuz
+linux-5.12/
+target/
+boot/
+iso/
+
