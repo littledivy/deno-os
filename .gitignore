@@ -3,6 +3,6 @@ initramfs
 vmlinuz
 linux-5.12/
 target/
-boot/
-iso/
+boot
+iso
 
