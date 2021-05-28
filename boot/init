@@ -1,0 +1,16 @@
+#!/bin/busybox sh
+
+/bin/busybox echo "Welcome to Deno OS (GNU/Linux 5.12.0 x86_64)"
+/bin/busybox echo 
+
+/bin/busybox mount -t proc none /proc
+/bin/busybox mount -t sysfs none /sys
+
+mknod -m 444 /dev/random c 1 8
+mknod -m 444 /dev/urandom c 1 9
+
+RUST_BACKTRACE=1 /sbin/init
+
+umount /sys
+umount /proc
+
